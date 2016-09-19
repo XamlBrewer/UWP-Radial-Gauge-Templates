@@ -16,33 +16,48 @@
                               Height="200"
                               Width="200"
                               Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
 
                             <!-- Scale -->
                             <Path Name="PART_Scale"
                                   Stroke="{TemplateBinding ScaleBrush}"
-                                  StrokeThickness="{TemplateBinding ScaleWidth}" />
+                                  StrokeThickness="{TemplateBinding ScaleWidth}"
+                                  Grid.ColumnSpan="2"
+                                  Grid.RowSpan="2" />
 
                             <!-- Trail -->
                             <Path Name="PART_Trail"
                                   Stroke="{TemplateBinding TrailBrush}"
-                                  StrokeThickness="{TemplateBinding ScaleWidth}" />
+                                  StrokeThickness="{TemplateBinding ScaleWidth}"
+                                  Grid.ColumnSpan="2"
+                                  Grid.RowSpan="2" />
 
                             <!-- Value and Unit -->
-                            <StackPanel VerticalAlignment="Center"
-                                        HorizontalAlignment="Center">
-                                <TextBlock Name="PART_ValueText"
-                                           Foreground="{TemplateBinding ValueBrush}"
-                                           FontSize="20"
-                                           FontWeight="SemiBold"
-                                           Text="{TemplateBinding Value}"
-                                           TextAlignment="Center"
-                                           Margin="0 0 0 2" />
-                                <TextBlock Foreground="{TemplateBinding UnitBrush}"
-                                           FontSize="16"
-                                           TextAlignment="Center"
-                                           Text="{TemplateBinding Unit}"
-                                           Margin="0" />
-                            </StackPanel>
+                            <TextBlock Name="PART_ValueText"
+                                       Foreground="{TemplateBinding ValueBrush}"
+                                       FontSize="40"
+                                       FontWeight="SemiBold"
+                                       Text="{TemplateBinding Value}"
+                                       TextAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Grid.Column="1"
+                                       Grid.Row="1" />
+                            <TextBlock Foreground="{TemplateBinding UnitBrush}"
+                                       FontSize="16"
+                                       FontWeight="Light"
+                                       TextAlignment="Right"
+                                       Text="{TemplateBinding Unit}"
+                                       VerticalAlignment="Top"
+                                       Margin="0 2 0 0"
+                                       Grid.Column="1"
+                                       Grid.Row="1" />
                         </Grid>
                     </Viewbox>
                 </ControlTemplate>

@@ -10,8 +10,14 @@
                 Value="180" />
         <Setter Property="NeedleWidth"
                 Value="0" />
-        <Setter Property="Unit"
-                Value="%" />
+        <!--<Setter Property="Unit"
+                Value="%" />-->
+        <Setter Property="TickBrush"
+                Value="Transparent" />
+        <Setter Property="ScaleTickBrush"
+                Value="Transparent" />
+        <Setter Property="ScaleBrush"
+                Value="Yellow" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:RadialGauge">

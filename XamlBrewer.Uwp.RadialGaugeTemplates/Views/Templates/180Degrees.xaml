@@ -8,8 +8,6 @@
                 Value="-90" />
         <Setter Property="MaxAngle"
                 Value="90" />
-        <Setter Property="NeedleWidth"
-                Value="0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:RadialGauge">
@@ -17,30 +15,39 @@
                         <Grid x:Name="PART_Container"
                               Height="200"
                               Width="200">
-
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
                             <!-- Scale -->
                             <Path Name="PART_Scale"
                                   Stroke="{TemplateBinding ScaleBrush}"
-                                  StrokeThickness="{TemplateBinding ScaleWidth}" />
+                                  StrokeThickness="{TemplateBinding ScaleWidth}"
+                                  Grid.RowSpan="2" />
 
                             <!-- Trail -->
                             <Path Name="PART_Trail"
                                   Stroke="{TemplateBinding TrailBrush}"
-                                  StrokeThickness="{TemplateBinding ScaleWidth}" />
+                                  StrokeThickness="{TemplateBinding ScaleWidth}"
+                                  Grid.RowSpan="2" />
 
                             <!-- Value and Unit -->
-                            <StackPanel VerticalAlignment="Center"
-                                        HorizontalAlignment="Center">
+                            <StackPanel VerticalAlignment="Top"
+                                        HorizontalAlignment="Center"
+                                        Orientation="Horizontal"
+                                        Margin="0 8 0 0"
+                                        Grid.Row="1">
                                 <TextBlock Name="PART_ValueText"
                                            Foreground="{TemplateBinding ValueBrush}"
                                            FontSize="20"
-                                           FontWeight="SemiBold"
                                            Text="{TemplateBinding Value}"
                                            TextAlignment="Center"
-                                           Margin="0 0 0 2" />
+                                           VerticalAlignment="Bottom"
+                                           Margin="0 0 8 0" />
                                 <TextBlock Foreground="{TemplateBinding UnitBrush}"
-                                           FontSize="16"
+                                           FontSize="20"
                                            TextAlignment="Center"
+                                           VerticalAlignment="Bottom"
                                            Text="{TemplateBinding Unit}"
                                            Margin="0" />
                             </StackPanel>
