@@ -1,5 +1,6 @@
 ﻿using Microsoft.Toolkit.Uwp.UI.Controls;
 using System;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -26,8 +27,28 @@ namespace XamlBrewer.Uwp.RadialGaugeTemplates
                 var gauge = new RadialGauge() { Height = square.ActualHeight, Width = square.ActualWidth };
                 gauge.Style = Resources["Dome"] as Style;
                 gauge.TrailBrush = new SolidColorBrush(square.RandomColor());
-                gauge.TickBrush = new SolidColorBrush(square.RandomColor());
-                gauge.ScaleTickBrush = App.Current.Resources["PageBackgroundBrush"] as SolidColorBrush;
+
+                if (random.Next(10) < 5)
+                {
+                    gauge.TickBrush = new SolidColorBrush(square.RandomColor());
+                }
+                else
+                {
+                    gauge.TickBrush = new SolidColorBrush(Colors.Transparent);
+                }
+
+                if (random.Next(10) < 5)
+                {
+                    gauge.ScaleTickBrush = App.Current.Resources["PageBackgroundBrush"] as SolidColorBrush;
+                }
+                else
+                {
+                    gauge.ScaleTickBrush = new SolidColorBrush(Colors.Transparent);
+                }
+
+                gauge.NeedleWidth = random.Next(8);
+                gauge.TickWidth = gauge.NeedleWidth;
+
                 gauge.ValueBrush = gauge.TrailBrush;
                 gauge.Maximum = 50;
                 gauge.TickSpacing = 5;
