@@ -7,9 +7,6 @@ using XamlBrewer.Uwp.Controls;
 
 namespace XamlBrewer.Uwp.RadialGaugeTemplates
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class PercentageRingPage : Page
     {
         public PercentageRingPage()
@@ -28,6 +25,8 @@ namespace XamlBrewer.Uwp.RadialGaugeTemplates
                 gauge.TrailBrush = new SolidColorBrush(square.RandomColor());
                 gauge.ScaleWidth = random.Next(5, 77);
                 gauge.Unit = "%";
+                gauge.UnitBrush = App.Current.Resources["PageForegroundBrush"] as SolidColorBrush;
+                gauge.ValueBrush = gauge.UnitBrush;
 
                 var side = square.Side();
                 gauge.Value = side * 2;

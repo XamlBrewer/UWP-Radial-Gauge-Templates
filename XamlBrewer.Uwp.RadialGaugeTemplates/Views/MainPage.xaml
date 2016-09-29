@@ -18,7 +18,7 @@
 
     </Page.Resources>
 
-    <Grid Background="{ThemeResource PageBackgroundBrush}">
+    <Grid Background="{StaticResource PageBackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -38,7 +38,14 @@
         <controls:RadialGauge Margin="20 0"
                               Grid.Row="1"
                               Value="60"
-                              Unit="Things" />
+                              Unit="Things"
+                              ScaleBrush="{StaticResource ScaleBrush}"
+                              ScaleTickBrush="{StaticResource PageBackgroundBrush}"
+                              NeedleBrush="{StaticResource NeedleBrush}"
+                              TickBrush="{StaticResource TickBrush}"
+                              TrailBrush="{StaticResource TrailBrush}"
+                              UnitBrush="{StaticResource PageForegroundBrush}"
+                              ValueBrush="{StaticResource PageForegroundBrush}" />
 
         <TextBlock Text="180 °"
                    Foreground="{StaticResource PageForegroundBrush}"
@@ -50,6 +57,18 @@
                               Value="60"
                               Unit="Things"
                               TickSpacing="20"
+                              NeedleWidth="2"
+                              TickWidth="2"
+                              TickLength="8"
+                              NeedleLength="90"
+                              ScaleTickWidth="1"
+                              ScaleBrush="{StaticResource ScaleBrush}"
+                              ScaleTickBrush="{StaticResource PageBackgroundBrush}"
+                              NeedleBrush="{StaticResource NeedleBrush}"
+                              TickBrush="{StaticResource TickBrush}"
+                              TrailBrush="{StaticResource TrailBrush}"
+                              UnitBrush="{StaticResource PageForegroundBrush}"
+                              ValueBrush="{StaticResource PageForegroundBrush}"
                               Margin="20 0"
                               Grid.Row="1"
                               Grid.Column="1" />
@@ -63,6 +82,18 @@
         <controls:RadialGauge Style="{StaticResource Audi}"
                               Value="60"
                               Unit="Things"
+                              TickLength="3"
+                              TickWidth="3"
+                              NeedleLength="97"
+                              ScaleTickWidth="1"
+                              NeedleWidth="1"
+                              ScaleBrush="{StaticResource ScaleBrush}"
+                              ScaleTickBrush="{StaticResource PageBackgroundBrush}"
+                              NeedleBrush="{StaticResource NeedleBrush}"
+                              TickBrush="{StaticResource TickBrush}"
+                              TrailBrush="{StaticResource TrailBrush}"
+                              UnitBrush="{StaticResource ScaleBrush}"
+                              ValueBrush="{StaticResource TrailBrush}"
                               Margin="20 0 20 20"
                               Grid.Row="3" />
 
@@ -76,6 +107,10 @@
         <controls:RadialGauge Style="{StaticResource Percentage}"
                               Value="60"
                               Unit="Things"
+                              ScaleBrush="{StaticResource ScaleBrush}"
+                              TrailBrush="{StaticResource TrailBrush}"
+                              UnitBrush="{StaticResource TrailBrush}"
+                              ValueBrush="{StaticResource TrailBrush}"
                               Margin="20 0 20 20"
                               Grid.Row="3"
                               Grid.Column="1" />

@@ -27,6 +27,7 @@ namespace XamlBrewer.Uwp.RadialGaugeTemplates
                 var gauge = new RadialGauge() { Height = square.ActualHeight, Width = square.ActualWidth };
                 gauge.Style = Resources["Audi"] as Style;
                 gauge.TrailBrush = new SolidColorBrush(square.RandomColor());
+                gauge.UnitBrush = gauge.ScaleBrush;
 
                 if (random.Next(10) < 5)
                 {

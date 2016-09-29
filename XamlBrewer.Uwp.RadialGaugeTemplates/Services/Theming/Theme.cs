@@ -10,14 +10,6 @@ namespace Mvvm.Services
 {
     public class Theme
     {
-        //public static Color ToColor(uint argb)
-        //{
-        //    return Color.FromArgb((byte)((argb & -16777216) >> 0x18),
-        //                          (byte)((argb & 0xff0000) >> 0x10),
-        //                          (byte)((argb & 0xff00) >> 8),
-        //                          (byte)(argb & 0xff));
-        //}
-
         // Call this in App OnLaunched.
         // Requires reference to Windows Mobile Extensions for the UWP.
         public static void ApplyToContainer()
