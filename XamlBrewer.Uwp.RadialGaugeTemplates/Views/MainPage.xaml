@@ -35,9 +35,7 @@
                    HorizontalAlignment="Center"
                    FontSize="20"
                    Margin="0 10" />
-        <controls:RadialGauge Margin="20 0"
-                              Grid.Row="1"
-                              Value="60"
+        <controls:RadialGauge Value="60"
                               Unit="Things"
                               ScaleBrush="{StaticResource ScaleBrush}"
                               ScaleTickBrush="{StaticResource PageBackgroundBrush}"
@@ -45,7 +43,10 @@
                               TickBrush="{StaticResource TickBrush}"
                               TrailBrush="{StaticResource TrailBrush}"
                               UnitBrush="{StaticResource PageForegroundBrush}"
-                              ValueBrush="{StaticResource PageForegroundBrush}" />
+                              ValueBrush="{StaticResource PageForegroundBrush}"
+                              IsInteractive="True"
+                              Margin="20 0"
+                              Grid.Row="1" />
 
         <TextBlock Text="180 °"
                    Foreground="{StaticResource PageForegroundBrush}"
@@ -62,6 +63,7 @@
                               TickLength="8"
                               NeedleLength="90"
                               ScaleTickWidth="1"
+                              ScaleWidth="8"
                               ScaleBrush="{StaticResource ScaleBrush}"
                               ScaleTickBrush="{StaticResource PageBackgroundBrush}"
                               NeedleBrush="{StaticResource NeedleBrush}"
@@ -69,6 +71,7 @@
                               TrailBrush="{StaticResource TrailBrush}"
                               UnitBrush="{StaticResource PageForegroundBrush}"
                               ValueBrush="{StaticResource PageForegroundBrush}"
+                              IsInteractive="False"
                               Margin="20 0"
                               Grid.Row="1"
                               Grid.Column="1" />
@@ -94,6 +97,7 @@
                               TrailBrush="{StaticResource TrailBrush}"
                               UnitBrush="{StaticResource ScaleBrush}"
                               ValueBrush="{StaticResource TrailBrush}"
+                              IsInteractive="True"
                               Margin="20 0 20 20"
                               Grid.Row="3" />
 
@@ -111,6 +115,7 @@
                               TrailBrush="{StaticResource TrailBrush}"
                               UnitBrush="{StaticResource TrailBrush}"
                               ValueBrush="{StaticResource TrailBrush}"
+                              IsInteractive="True"
                               Margin="20 0 20 20"
                               Grid.Row="3"
                               Grid.Column="1" />

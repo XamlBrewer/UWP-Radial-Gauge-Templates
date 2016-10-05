@@ -16,8 +16,6 @@
                 Value="Transparent" />
         <Setter Property="ScaleTickBrush"
                 Value="Transparent" />
-        <Setter Property="ScaleBrush"
-                Value="Yellow" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:RadialGauge">
