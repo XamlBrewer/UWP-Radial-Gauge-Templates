@@ -1,0 +1,51 @@
+﻿<Page x:Class="XamlBrewer.Uwp.RadialGaugeTemplates.SmallArcsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:XamlBrewer.Uwp.RadialGaugeTemplates.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      mc:Ignorable="d">
+
+    <Grid Background="{StaticResource PageBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <controls:RadialGauge Margin="100 0 -100 0"
+                              MinAngle="-150"
+                              MaxAngle="-30"
+                              IsInteractive="True"
+                              ScaleBrush="Transparent"
+                              ScaleTickBrush="{StaticResource TickBrush}"
+                              NeedleBrush="{StaticResource NeedleBrush}"
+                              TickBrush="Transparent"
+                              TrailBrush="Transparent"
+                              UnitBrush="{StaticResource PageForegroundBrush}"
+                              ValueBrush="{StaticResource PageForegroundBrush}"
+                              NeedleWidth="2.5"
+                              TickSpacing="25"
+                              Value="40"
+                              Unit="°C"
+                              StepSize="1" />
+        <controls:RadialGauge Margin="-100 0 100 0"
+                              Value="60"
+                              Unit="Gallons"
+                              MinAngle="30"
+                              MaxAngle="150"
+                              IsInteractive="True"
+                              ScaleWidth="60"
+                              StepSize="1"
+                              TickSpacing="20"
+                              TickWidth="2"
+                              NeedleWidth="2.0"
+                              ScaleBrush="{StaticResource ScaleBrush}"
+                              ScaleTickBrush="Transparent"
+                              NeedleBrush="{StaticResource NeedleBrush}"
+                              TickBrush="{StaticResource TickBrush}"
+                              TrailBrush="{StaticResource TrailBrush}"
+                              UnitBrush="{StaticResource PageForegroundBrush}"
+                              ValueBrush="{StaticResource PageForegroundBrush}"
+                              Grid.Column="1" />
+    </Grid>
+</Page>
